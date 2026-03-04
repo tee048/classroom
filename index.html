@@ -34,6 +34,7 @@
             /* 1. 限制絕對高度 (配合 header 的 70px，留出上下空間) */
             width: auto;
             /* 2. 寬度設為 auto，圖片就會依照原本的長寬比自動縮放，絕不變形 */
+            margin-left: 10px;
             display: block;
             /* 3. 消除 HTML img 標籤預設自帶的底部 3px 神秘空白間隙 */
             object-fit: contain;
@@ -45,27 +46,31 @@
         .logo img:hover {
             opacity: 0.8;
             /* 滑鼠懸停時稍微降低透明度，增加互動感 */
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .nav {
             display: flex;
             /* 啟動彈性佈局 */
+            margin-left: auto;
             gap: 40px;
             /* 統一設定裡面所有連結的間距，數值越大越開 */
             align-items: center;
             /* 確保文字垂直對齊 */
+            justify-content: flex-end;
         }
         .nav a {
-            color: var(--color-neutral-50);
-            /* 連結文字顏色 */
+            color:var(--color-neutral-200);
             text-decoration: none;
-            /* 移除預設的底線 */
+            font-size:1.3rem ;
             font-weight: 500;
-            /* 文字粗細 */
             transition: 0.3s ease;
-            /* 加入滑鼠互動的轉場準備 */
         }
+        .nav a:hover {
+            color: var(--color-neutral-400);
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 
@@ -74,11 +79,14 @@
         <div class="logo">
             <img src="images/logo.png" alt="brand logo">
         </div>
+        
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
         </div>
+
+        <div class="more"></div>
     </header>
 
     <div class="content">
