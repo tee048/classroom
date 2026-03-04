@@ -19,8 +19,7 @@
             width: 100%;
             background-color: var(--color-secondary-700);
             display: flex;
-
-
+            justify-content: space-between;
 
         }
 
@@ -39,7 +38,32 @@
             /* 3. 消除 HTML img 標籤預設自帶的底部 3px 神秘空白間隙 */
             object-fit: contain;
             /* 4. 確保整張圖片完整容納在設定的尺寸內 */
-            transition: opacity 0.3s ease;
+            transition: 0.3s ease;
+            /* 加入滑鼠互動的轉場準備 */
+        }
+
+        .logo img:hover {
+            opacity: 0.8;
+            /* 滑鼠懸停時稍微降低透明度，增加互動感 */
+            transform: scale(1.1);
+        }
+
+        .nav {
+            display: flex;
+            /* 啟動彈性佈局 */
+            gap: 40px;
+            /* 統一設定裡面所有連結的間距，數值越大越開 */
+            align-items: center;
+            /* 確保文字垂直對齊 */
+        }
+        .nav a {
+            color: var(--color-neutral-50);
+            /* 連結文字顏色 */
+            text-decoration: none;
+            /* 移除預設的底線 */
+            font-weight: 500;
+            /* 文字粗細 */
+            transition: 0.3s ease;
             /* 加入滑鼠互動的轉場準備 */
         }
     </style>
